@@ -32,7 +32,7 @@ const SerieSearch = () => {
     if (response.ok) {
       setSearchQuery("");
       setError(false);
-      console.log("Séries trouvées", json);
+      console.log("Série(s) trouvée(s)", json);
     }
   };
 
