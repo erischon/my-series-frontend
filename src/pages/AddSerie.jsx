@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import Input from "../components/Input";
+
 const SerieSearch = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [tmdbData, setTmdbData] = useState({});
@@ -38,8 +40,6 @@ const SerieSearch = () => {
     }
   };
 
-  console.log("les data", tmdbData);
-
   return (
     <main>
       <div className="search__container">
@@ -55,10 +55,12 @@ const SerieSearch = () => {
       </div>
 
       <section>
-        <ul>
+        <form>
           {tmdbData.results &&
-            tmdbData.results.map((serie) => <li>{serie.name}</li>)}
-        </ul>
+            tmdbData.results.map((serie) => (
+              <Input key={serie.id} infos={serie} />
+            ))}
+        </form>
       </section>
     </main>
   );
