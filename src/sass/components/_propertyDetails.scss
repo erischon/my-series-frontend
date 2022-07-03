@@ -1,0 +1,62 @@
+.item-card {
+  display: grid;
+  grid-template-columns: 75px 1fr 25px;
+  grid-template-rows: 50px;
+  justify-content: center;
+  grid-template-areas:
+    "image title type"
+    "image title rate";
+
+  position: relative;
+
+  // width: 300px;
+  padding: 0.5rem;
+  background-color: black;
+
+  img {
+    grid-area: image;
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+  }
+
+  &__title {
+    grid-area: title;
+
+    max-width: 100%;
+    padding-left: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $clr-text;
+  }
+
+  &__date {
+    grid-area: rate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    span {
+      font-size: 0.85rem;
+    }
+
+    .item-card__date-value {
+      font-size: 0.75rem;
+      margin-left: 0.25rem;
+    }
+  }
+
+  &__type {
+    text-align: right;
+    font-size: 1.25rem;
+    color: $clr-text;
+  }
+}
+
+@media screen and (min-width: 640px) {
+}

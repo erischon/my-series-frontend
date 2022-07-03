@@ -55,7 +55,7 @@ const SerieSearch = () => {
       </div>
 
       <section>
-        <form>
+        <form className="form-add">
           {tmdbData.results &&
             tmdbData.results.map((serie) => (
               <Input key={serie.id} infos={serie} />

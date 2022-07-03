@@ -1,0 +1,17 @@
+.input-result {
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  align-items: flex-start;
+
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+
+  background-color: rgba(0, 0, 0, 0.296);
+
+  p {
+    margin: 0;
+    padding: 0;
+
+    font-size: 0.85rem;
+  }
+}
